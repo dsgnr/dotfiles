@@ -40,6 +40,7 @@ local opts = {
                         "--show-error-codes",
                         "--no-error-summary",
                         "--no-pretty",
+                        "--install-types",
                         "--python-executable",
                         (os.getenv("VIRTUAL_ENV") or "") .. "/bin/python",
                         params.temp_path

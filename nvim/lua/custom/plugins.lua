@@ -17,7 +17,7 @@ local plugins = {
         opts = {
             ensure_installed = {
                 "black",
-                "mypy",
+                "mypy --install-types",
                 "ruff",
                 "pyright",
                 "eslint-lsp",
