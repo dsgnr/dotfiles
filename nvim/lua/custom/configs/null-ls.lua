@@ -41,7 +41,7 @@ local opts = {
                         "--no-error-summary",
                         "--no-pretty",
                         "--python-executable",
-                        "/root/.virtualenvs/py312/bin/python",
+                        (os.getenv("VIRTUAL_ENV") or "") .. "/bin/python",
                         params.temp_path
                     }
                 end,
