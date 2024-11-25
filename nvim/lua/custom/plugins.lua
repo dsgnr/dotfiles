@@ -1,52 +1,47 @@
 local plugins = {
     {
-        "nvim-neotest/nvim-nio"
+        "nvim-neotest/nvim-nio",
     },
     {
         "nvimtools/none-ls.nvim",
         dependencies = {
-            "nvimtools/none-ls-extras.nvim"
+            "nvimtools/none-ls-extras.nvim",
         },
-        ft = {"javascript", "python"},
         opts = function()
             return require "custom.configs.null-ls"
-        end
+        end,
+    },
+    {
+        "stevearc/conform.nvim",
+        event = { "BufWritePre" },
+        cmd = { "ConformInfo" },
+        opts = function()
+            return require "custom.configs.conform"
+        end,
     },
     {
         "williamboman/mason.nvim",
         opts = {
             ensure_installed = {
                 "black",
+                "isort",
                 "mypy --install-types",
-                "ruff",
                 "pyright",
                 "eslint-lsp",
                 "prettier",
                 "typescript-language-server",
                 "ansible-language-server",
                 "stylua",
-                "lua-language-server"
-            }
-        }
-    },
-    {
-        "mhartington/formatter.nvim",
-        opts = function()
-            return require "custom.configs.formatter"
-        end
-    },
-    {
-        "mfussenegger/nvim-lint",
-        config = function()
-            require "custom.configs.lint"
-        end
+                "lua-language-server",
+            },
+        },
     },
     {
         "neovim/nvim-lspconfig",
         config = function()
             require "plugins.configs.lspconfig"
             require "custom.configs.lspconfig"
-        end
-    }
+        end,
+    },
 }
 return plugins
