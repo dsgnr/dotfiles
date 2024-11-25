@@ -24,7 +24,8 @@ local plugins = {
                 "prettier",
                 "typescript-language-server",
                 "ansible-language-server",
-                "stylua"
+                "stylua",
+                "lua-language-server"
             }
         }
     },
