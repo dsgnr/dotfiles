@@ -38,6 +38,7 @@ local plugins = {
                 "htmlhint",
                 "typescript-language-server",
                 "ansible-language-server",
+                "yaml-language-server",
                 "stylua",
                 "lua-language-server",
             },
