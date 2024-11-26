@@ -3,12 +3,14 @@ local plugins = {
         "nvim-neotest/nvim-nio",
     },
     {
-        "nvimtools/none-ls.nvim",
-        dependencies = {
-            "nvimtools/none-ls-extras.nvim",
+        "mfussenegger/nvim-lint",
+        event = {
+            "BufReadPre",
+            "BufNewFile",
+            "BufRead",
         },
-        opts = function()
-            return require "custom.configs.null-ls"
+        config = function()
+            require "custom.configs.lint"
         end,
     },
     {
@@ -27,8 +29,13 @@ local plugins = {
                 "isort",
                 "mypy --install-types",
                 "pyright",
+                "pylint",
                 "eslint-lsp",
+                "shellcheck",
                 "prettier",
+                "pydocstyle",
+                "yamllint",
+                "htmlhint",
                 "typescript-language-server",
                 "ansible-language-server",
                 "stylua",
