@@ -34,6 +34,7 @@ local plugins = {
                 "shellcheck",
                 "prettier",
                 "pydocstyle",
+                "flake8",
                 "yamllint",
                 "htmlhint",
                 "typescript-language-server",

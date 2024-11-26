@@ -1,7 +1,7 @@
 require("lint").linters_by_ft = {
     javascript = { "eslint" },
     typescript = { "eslint" },
-    python = { "pylint", "pydocstyle", "pycodestyle" },
+    python = { "pylint", "pydocstyle", "flake8" },
     yaml = { "yamllint" },
     ansible = { "ansible-lint", "yamllint" },
     markdown = { "markdownlint" },
