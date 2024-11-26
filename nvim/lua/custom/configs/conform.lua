@@ -13,7 +13,6 @@ local opts = {
         css = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
-        yaml = { "prettier" },
         markdown = { "prettier" },
         lua = { "stylua" },
     },
