@@ -42,6 +42,7 @@ local plugins = {
                 "yaml-language-server",
                 "stylua",
                 "lua-language-server",
+                "markdownlint",
             },
         },
     },
